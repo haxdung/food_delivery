@@ -1,0 +1,11 @@
+<li class="coment-food">
+  <div id="comment-food">
+    <div>
+      <%= gravatar_for comment_food.user, 30 %>&nbsp;<%= comment_food.user.name %>
+    </div>
+    <hr>
+    <div>
+      <%= comment_food.content %>
+    </div>
+  </div>
+</li>

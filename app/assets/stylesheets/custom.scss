@@ -142,3 +142,47 @@ a #signup-modal:hover {
 .pagination {
   visibility: hidden;
 }
+
+
+/*.container-fluid #menu-panel {
+  border: 1px solid #eee;
+  padding: 15px 5px 15px 15px;
+  width: 235px;
+  margin-right: 10px;
+  margin-top: 48px;
+  position: absolute;
+}*/
+#food-body{
+  margin-left: 50.5px;
+}
+.micro-act-btns {
+  overflow: hidden;
+  clear: both;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+}
+.list-inline-item a {
+  display: block;
+  padding: 15px 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #005d80;
+  border-right: #F0F0F0 1px solid;
+  border-bottom: none;
+  text-align: center;
+  /*float: left;*/
+  width: 100%;
+  font-weight: 700;
+}
+.col-md-8 ul {
+  padding: 0;
+}
+.col-md-8 ul li {
+  margin-bottom: 30px;
+}
+#comment-food {
+  background: #FFFFFF;
+  padding: 15px;
+}

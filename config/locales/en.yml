@@ -89,3 +89,7 @@ your password will stay as it is."
           new_food: "New food"
           hot_food: "Hot food"
           hot_chef: "Hot chef"
+    foods:
+      show:
+        comment: "Comments"
+        image: "Images"

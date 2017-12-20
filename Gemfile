@@ -31,13 +31,17 @@ gem "i18n", "~> 0.7.0"
 
 gem "jquery-rails", "~> 4.3", ">= 4.3.1"
 
-gem "bootstrap", "~> 4.0.0.alpha6"
+# gem "bootstrap", "~> 4.0.0.alpha6"
 
 gem "font-awesome-rails"
 
 gem "will_paginate"
 
 gem "bootstrap-will_paginate"
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+gem 'carrierwave',             '1.1.0'
 
 group :development, :test do
 

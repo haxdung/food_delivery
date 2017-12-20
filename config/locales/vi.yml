@@ -89,3 +89,7 @@ mật khẩu của bạn sẽ vẫn như nó được."
           new_food: "Món mới"
           hot_food: "Món đặt nhiều"
           hot_chef: "Đầu bếp nổi tiếng"
+    foods:
+      show:
+          comment: "Bình luận"
+          image: "Hình ảnh"
