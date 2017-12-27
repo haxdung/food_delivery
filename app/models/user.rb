@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: "Order",
                                   foreign_key: "employee_id"
 
+  has_many :carts
 
   has_secure_password
   validates :name ,presence: true, length: {maximum: 30}

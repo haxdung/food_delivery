@@ -1,0 +1,15 @@
+<li id="<%= cart.id %>">
+  <div>
+    <div>
+      <img src="<%= cart.food.img_url %>"  height="100" width="100">
+    </div>
+    <div>
+      <%=cart.food.name %>
+    </div>
+    <div class="price" id="price-<%= cart.id %>">
+      <%=cart.food.price %> VND
+    </div>
+    <input class="quantity" type="number" min="0" value="<%= cart.quantity %>" id="cart-<%= cart.id %>">
+  </div>
+  <br>
+</li>

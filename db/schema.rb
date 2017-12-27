@@ -13,14 +13,13 @@
 ActiveRecord::Schema.define(version: 20171207163509) do
 
   create_table "carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "users_id"
+    t.integer "user_id"
     t.integer "total_money"
     t.bigint "food_id"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["food_id"], name: "index_carts_on_food_id"
-    t.index ["users_id"], name: "index_carts_on_users_id"
   end
 
   create_table "comment_foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -97,7 +96,6 @@ ActiveRecord::Schema.define(version: 20171207163509) do
   end
 
   add_foreign_key "carts", "foods"
-  add_foreign_key "carts", "users", column: "users_id"
   add_foreign_key "comment_foods", "foods"
   add_foreign_key "comment_foods", "users"
   add_foreign_key "foods", "food_categories"
