@@ -9,5 +9,8 @@ class CreateOrders < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :orders, :customer_id
+    add_index :orders, :employee_id
+    add_index :orders, [:customer_id, :employee_id]
   end
 end

@@ -29,10 +29,7 @@ function login() {
             dataType: "script",
             success: function(data) {
               if (data === 'success') {
-                // window.location.replace('http://localhost:3000');
                 window.location.reload();
-              } else if (data === 'error') {
-                document.getElementById('status').innerHTML = data;
               }
             }
           });
@@ -42,14 +39,3 @@ function login() {
   });
 }
 
-$('#myLogout').click(function(e) {
-  console.log('aaa');
-  FB.getLoginStatus(function(response) {
-    console.log(response);
-    if (response && response.status === 'connected') {
-      FB.logout(function(response) {
-          document.location.reload();
-      });
-    }
-  });
-});

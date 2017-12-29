@@ -16,6 +16,9 @@ vi:
         message1: "Tài khoản chưa được xác nhận. "
         message2: "Kiểm tra email của bạn để biết liên kết xác nhận."
         danger: "Kết hợp email/mật khẩu không hợp lệ"
+        success: "Đăng nhập thành công"
+      destroy:
+        success: "Bạn đã đăng xuất"
     password_resets:
       create:
         sent: "Email được gửi bằng hướng dẫn đặt lại mật khẩu"
@@ -69,6 +72,14 @@ mật khẩu của bạn sẽ vẫn như nó được."
         login_via: "Đăng nhập bằng facebook"
         signup: "Đăng ký"
         logout: "Đăng xuất"
+        header:
+          all: "Tất cả"
+          lunch: "Cơm trưa"
+          drink: "Đồ uống"
+          dessert: "Món tráng miệng"
+          new_order: "Đơn hàng mới"
+          done: "Đơn đặt hàng tôi đã giao"
+          processing: "Đang tiến hành"
     password_resets:
       new:
         email: "Địa chỉ email"
@@ -89,7 +100,34 @@ mật khẩu của bạn sẽ vẫn như nó được."
           new_food: "Món mới"
           hot_food: "Món đặt nhiều"
           hot_chef: "Đầu bếp nổi tiếng"
+<<<<<<< HEAD
     foods:
       show:
           comment: "Bình luận"
           image: "Hình ảnh"
+=======
+        show_orders:
+          all: "Tất cả đơn đặt hàng"
+          destination: "Nơi Đến:"
+          customer: "Khách hàng:"
+          employee: "Nhân viên:"
+          details: "Chi tiết đơn đặt hàng:"
+          quantity: "Số lượng:"
+          price_each: "Giá:"
+    foods:
+      show:
+        header:
+          category: "Loại món"
+          rate: "lượt bình chọn"
+          price: "Giá"
+          chef: "Đầu bếp"
+          delivery_fee: "PHÍ VẬN CHUYỂN"
+    foods:
+      show:
+          comment: "Bình luận"
+          image: "Hình ảnh"
+          setting: "Lựa chọn"
+          picture: "Ảnh"
+          call: "Gọi"
+          share: "Chia sẻ"
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e

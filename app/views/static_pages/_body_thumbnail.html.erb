@@ -3,12 +3,12 @@
     <% foods.each do |food| %>
       <div class="col-md-2 col-sm-4">
         <div class="thumbnail">
-          <img src="<%= food.img_url %>">
+          <a href="/foods/<%= food.id %>" alt="<%= food.name %>"><img src="<%= food.img_url %>"></a>
           <div class="caption">
             <h4><a href="/foods/<%= food.id %>" class="text-center"> <%= food.name %> </a></h4>
             <span>$<%= food.price %></span>
             <br>
-            <span><a href="/users/<%= food.user_id %>"><%= User.find(food.user_id).name %></a></span>
+            <span><a href="/users/<%= food.user_id %>"><%= food.user.name %></a></span>
           </div>
         </div>
       </div>

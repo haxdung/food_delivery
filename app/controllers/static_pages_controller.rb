@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @all_orders = Order.all.paginate page: params[:page], per_page: 10
     @new_foods = Food.newfood
     @hot_foods = Food.hotfood
     @hot_chefs = User.hotchef

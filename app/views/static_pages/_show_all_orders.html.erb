@@ -1,0 +1,17 @@
+<h2><%= t "views.static_pages.show_orders.all" %></h2>
+<div class="thumb-layout">
+  <div class="row" style="display:flex; flex-wrap:wrap;">
+    <% orders.each do |order| %>
+      <div class="col-md-2 col-sm-4">
+        <div class="thumbnail">
+          <span><%= t "views.static_pages.show_orders.destination" %>: <a href="/foods/<%= order.id %>" class="text-center"> <%= order.address %></a></span>
+          <span><%= t "views.static_pages.show_orders.customer" %>: <a href="/foods/<%= order.id %>" class="text-center"> <%= User.find(order.customer_id).name %></a></span>
+          <span><%= t "views.static_pages.show_orders.employee" %>: <a href="/foods/<%= order.id %>" class="text-center"> <%= User.find(order.employee_id).name %></a></span>
+          </br>
+          <span><%= t "views.static_pages.show_orders.total_money" %>: $<%= order.total_money %></span>
+          <span><%= link_to t("views.static_pages.show_orders.details"), order_details_path %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

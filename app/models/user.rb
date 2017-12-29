@@ -5,6 +5,15 @@ class User < ApplicationRecord
   has_many :comment_foods
   has_many :orders
   has_many :foods
+  has_many :customer, through: :active_relationships, source: :customer
+  has_many :shippers, through: :active_relationships, source: :employee
+
+  has_many :active_relationships, class_name: "Order",
+                                  foreign_key: "customer_id"
+  has_many :passive_relationships, class_name: "Order",
+                                  foreign_key: "employee_id"
+
+
   has_secure_password
   validates :name ,presence: true, length: {maximum: 30}
   validates :username, presence: true, length: {minimum: 6}

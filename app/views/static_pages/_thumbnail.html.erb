@@ -4,10 +4,10 @@
       <li class="col-sm-3">
         <div class="casing">
           <div class="thumbnail">
-            <a href="#"><img src="<%= obj.img_url %>"></a>
+            <a href="/foods/<%= obj.id %>" alt="<%= obj.name %>"><img src="<%= obj.img_url %>"></a>
           </div>
           <div class="caption">
-            <h4><a href="/<%= "#{obj.class_name.downcase}/#{obj.id}" %>" class="text-center"><%= obj.name %></a></h4>
+            <h4><a href="/<%= "#{obj.class_name.downcase}s/#{obj.id}" %>" class="text-center"><%= obj.name %></a></h4>
             <% if obj.class_name == "Food"%>
               <p><%= t("views.static_pages.home.slider.price") + " #{obj.attr1}" %></p>
               <a class="btn btn-mini" href="/users/<%= obj.attr2 %>"><%= t("views.static_pages.home.slider.chef") +

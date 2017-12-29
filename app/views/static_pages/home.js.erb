@@ -5,3 +5,11 @@ $('.all-foods').append('<%= j render partial: "static_pages/body_thumbnail", loc
   $(window).off('scroll');
   $('.pagination').remove();
 <% end %>
+
+$('.all-orders').append('<%= j render partial: "static_pages/show_all_orders", locals: {orders: @all_orders} %>');
+<% if @all_orders.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate @all_orders %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>

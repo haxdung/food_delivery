@@ -16,6 +16,9 @@ en:
         message1: "Account not activated. "
         message2: "Check your email for the activation link."
         danger: "Invalid email/password combination"
+        success: "Login successful"
+      destroy:
+        success: "You logged out"
     password_resets:
       create:
         sent: "Email sent with password reset instructions"
@@ -69,6 +72,14 @@ your password will stay as it is."
         login_via: "Login via Facebook"
         signup: "Sign up"
         logout: "Logout"
+        header:
+          all: "All"
+          lunch: "Lunch"
+          drink: "Drink"
+          dessert: "Dessert"
+          new_order: "New Orders"
+          done: "Orders I've done"
+          processing: "In process"
     password_resets:
       new:
         email: "Email address"
@@ -89,7 +100,34 @@ your password will stay as it is."
           new_food: "New food"
           hot_food: "Hot food"
           hot_chef: "Hot chef"
+<<<<<<< HEAD
+=======
+        show_orders:
+          all: "All Orders"
+          destination: "Destination:"
+          customer: "Customer:"
+          employee: "Employee:"
+          details: "Order Details:"
+          quantity: "Quantity:"
+          price_each: "Price Each:"
+          total_money: "Total Money:"
+    foods:
+      show:
+        header:
+          category: "Category"
+          rate: "vote"
+          price: "Price"
+          chef: "Chef"
+          delivery_fee: "DELIVERY FEE"
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
     foods:
       show:
         comment: "Comments"
         image: "Images"
+<<<<<<< HEAD
+=======
+        setting: "Setting"
+        picture: "Picture"
+        call: "Call"
+        share: "Share"
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e

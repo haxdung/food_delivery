@@ -39,10 +39,19 @@ gem "will_paginate"
 
 gem "bootstrap-will_paginate"
 
+<<<<<<< HEAD
+=======
+gem "config"
+
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 gem 'carrierwave',             '1.1.0'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
 group :development, :test do
 
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

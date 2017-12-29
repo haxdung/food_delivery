@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="container" id="food-header">
+      <div class="col-md-5">
+        <img src="<%= food.img_url %>" alt="<%= food.name %>" title="<%= food.name %>">
+      </div>
+      <div class="col-md-7">
+        <h1><%= food.name %></h1>
+        <p><%= "#{t "views.foods.show.header.category"}: " %><%= link_to category.name, category %></p>
+        <%= render "foods/star_rating" %>
+        <p><%= "#{food.rating_avg} / #{food.rate_count} " %><%= t "views.foods.show.header.rate" %></p>
+        <p><%= t "views.foods.show.header.price" %>: $<%= food.price %></p>
+        <p><%= t "views.foods.show.header.chef" %>: <%= link_to food.user.name, food.user %></p>
+        <hr>
+        <h5><%= t "views.foods.show.header.delivery_fee" %>: <%= Settings.delivery_fee %></h5>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

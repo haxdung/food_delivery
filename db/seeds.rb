@@ -14,7 +14,17 @@ User.create(name: "Hieu",
             password: "12345678",
             password_confirmation: "12345678",
             username: "hieuhieu",
+            activated: true,
             avatar_url: "http://www.agentpipeline.com/wp-content/uploads/2015/10/Man-Avatar.png")
+
+User.create(name: "Chien",
+            email:"hieu1@gmail.com", usertype: 2,
+            password: "12345678",
+            password_confirmation: "12345678",
+            username: "employee",
+            activated: true,
+            avatar_url: "http://www.agentpipeline.com/wp-content/uploads/2015/10/Man-Avatar.png")
+
 
 User.create(name: "Linh",
               email: "example@gmail.com",
@@ -65,6 +75,33 @@ User.create(name: "Quang",
                rate_count: rate_count)
 end
 
+<<<<<<< HEAD
+=======
+20.times do |n|
+  customer_id = 1
+  employee_id = 2
+  address = "Ha Noi"
+  total_money = 20
+  status = 1
+  Order.create(customer_id: customer_id,
+               employee_id: employee_id,
+               address: address,
+               total_money: total_money,
+               status: status)
+end
+
+20.times do |n|
+  quantity = 100
+  order_id = 2
+  food_id = 1
+  price = 2
+  OrderDetail.create(quantity: quantity,
+                      order_id: order_id,
+                      food_id: food_id,
+                      price: price)
+
+end
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
 Food.all.each do |f|
   User.limit(5).each do |u|
     f.comment_foods.create(content: Faker::Lorem.sentence(50),user_id: u.id)

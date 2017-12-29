@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20171207163509) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["food_category_id"], name: "index_foods_on_food_category_id"
+    t.index ["user_id"], name: "index_foods_on_user_id"
   end
 
   create_table "order_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -71,6 +72,9 @@ ActiveRecord::Schema.define(version: 20171207163509) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_id", "employee_id"], name: "index_orders_on_customer_id_and_employee_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
+    t.index ["employee_id"], name: "index_orders_on_employee_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -82,13 +86,13 @@ ActiveRecord::Schema.define(version: 20171207163509) do
     t.string "address"
     t.string "phone_number"
     t.string "remember_digest"
+    t.string "avatar_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
     t.string "reset_digest"
-    t.string "avatar_url"
     t.datetime "reset_sent_at"
   end
 
@@ -97,7 +101,7 @@ ActiveRecord::Schema.define(version: 20171207163509) do
   add_foreign_key "comment_foods", "foods"
   add_foreign_key "comment_foods", "users"
   add_foreign_key "foods", "food_categories"
+  add_foreign_key "foods", "users"
   add_foreign_key "order_details", "foods"
   add_foreign_key "order_details", "orders"
-  add_foreign_key "foods", "users"
 end

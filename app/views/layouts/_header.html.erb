@@ -12,16 +12,30 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-        <li><a href="#">All</a></li>
-        <li><a href="#">Lunch</a></li>
-        <li><a href="#">Drink</a></li>
-        <li><a href="#">Dessert</a></li>
+      <% if logged_in? && current_user.usertype == 2 %>
+        <li><a href="#"><%= t "views.layouts.header.all" %></a></li>
+        <li><a href="#"><%= t "views.layouts.header.new_order" %></a></li>
+        <li><a href="#"><%= t "views.layouts.header.done" %></a></li>
+        <li><a href="#"><%= t "views.layouts.header.processing" %></a></li>
+      <% else %>
+        <li><a href="#"><%= t "views.layouts.header.all" %></a></li>
+        <li><a href="#"><%= t "views.layouts.header.lunch" %></a></li>
+        <li><a href="#"><%= t "views.layouts.header.drink" %></a></li>
+        <li><a href="#"><%= t "views.layouts.header.dessert" %></a></li>
+      <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if !logged_in? %>
         <li><a href="#loginModal" data-toggle="modal" id="login-button"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i> <%= t("views.layouts.login") %></a></li>
         <li><a href="#signupModal" data-toggle="modal" ><i class="fa fa-user-plus fa-2x"></i> <%= t "views.layouts.signup"%></a></li>
       <% else %>
+<<<<<<< HEAD
+=======
+        <li><%= link_to logout_path, remote: true, method: :delete do %>
+              <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i><%= t "views.layouts.logout" %>
+            <% end %>
+        </li>
+>>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
         <li id="myLogout"><a href="<%= logout_path %>"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i><%= t("views.layouts.logout") %></a></li>
       <% end %>
       <li class="dropdown">
