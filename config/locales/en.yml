@@ -100,8 +100,6 @@ your password will stay as it is."
           new_food: "New food"
           hot_food: "Hot food"
           hot_chef: "Hot chef"
-<<<<<<< HEAD
-=======
         show_orders:
           all: "All Orders"
           destination: "Destination:"
@@ -119,15 +117,11 @@ your password will stay as it is."
           price: "Price"
           chef: "Chef"
           delivery_fee: "DELIVERY FEE"
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
     foods:
       show:
         comment: "Comments"
         image: "Images"
-<<<<<<< HEAD
-=======
         setting: "Setting"
         picture: "Picture"
         call: "Call"
         share: "Share"
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e

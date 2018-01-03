@@ -245,10 +245,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   carrierwave (= 1.1.0)
   coffee-rails (~> 4.2)
-<<<<<<< HEAD
-=======
   config
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
   faker!
   font-awesome-rails
   i18n (~> 0.7.0)

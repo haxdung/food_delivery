@@ -75,8 +75,6 @@ User.create(name: "Quang",
                rate_count: rate_count)
 end
 
-<<<<<<< HEAD
-=======
 20.times do |n|
   customer_id = 1
   employee_id = 2
@@ -101,7 +99,7 @@ end
                       price: price)
 
 end
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
+
 Food.all.each do |f|
   User.limit(5).each do |u|
     f.comment_foods.create(content: Faker::Lorem.sentence(50),user_id: u.id)

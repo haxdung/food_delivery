@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
   def new
     if logged_in?
       redirect_to current_user
+    else
+      redirect_to root_url
     end
   end
 
@@ -22,7 +24,7 @@ class SessionsController < ApplicationController
         end
       else
         flash.now[:danger] = t "controllers.sessions.create.danger"
-        render "new"
+        redirect_to root_url
       end
     else
       begin
@@ -44,8 +46,5 @@ class SessionsController < ApplicationController
     respond_to do |format|
       format.js { render inline: "location.reload()" }
     end
-  end
-
-  def new
   end
 end

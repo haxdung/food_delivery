@@ -1,3 +1,4 @@
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -144,17 +145,6 @@ a #signup-modal:hover {
   visibility: hidden;
 }
 
-<<<<<<< HEAD
-
-/*.container-fluid #menu-panel {
-  border: 1px solid #eee;
-  padding: 15px 5px 15px 15px;
-  width: 235px;
-  margin-right: 10px;
-  margin-top: 48px;
-  position: absolute;
-}*/
-=======
 #food-header {
   img {
     height: 300px;
@@ -170,7 +160,6 @@ a #signup-modal:hover {
     position: absolute;
   }*/
 }
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
 #food-body{
   margin-left: 50.5px;
 }
@@ -201,12 +190,6 @@ a #signup-modal:hover {
 .col-md-8 ul li {
   margin-bottom: 30px;
 }
-<<<<<<< HEAD
-#comment-food {
-  background: #FFFFFF;
-  padding: 15px;
-}
-=======
 
 #comment-food {
   background: #FFFFFF;
@@ -223,4 +206,7 @@ a #signup-modal:hover {
   padding-top: 50px;
   background: #eee;
 }
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
+
+#cart {
+  width: 200px
+}

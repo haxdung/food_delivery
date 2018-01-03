@@ -1,52 +1,8 @@
-<<<<<<< HEAD
-=======
+<%= render "layouts/banner" %>
 <% if logged_in? && current_user.usertype == 2%>
   <%= render "employee_home_page"%>
 <% else %>
   <%= render "customer_home_page" %>
 <% end %>
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
-<%= render "layouts/banner" %>
-<div class="container">
-  <div class="slider">
-    <div class="container">
-      <div class="col-xs-12">
-        <div class="carousel slide" id="myCarousel">
-          <div class="carousel-inner">
-            <div class="item active">
-              <h3 class="text-center myCaption"><%= t "views.static_pages.home.slider.new_food" %></h3>
-              <%= render partial: "static_pages/thumbnail", locals: {objects: @new_foods} %>
-            </div><!-- /Slide1 -->
 
-            <div class="item">
-              <h3 class="text-center myCaption"><%= t "views.static_pages.home.slider.hot_food" %></h3>
-              <%= render partial: "static_pages/thumbnail", locals: {objects: @hot_foods} %>
-            </div><!-- /Slide2 -->
 
-            <div class="item">
-              <h3 class="text-center myCaption"><%= t "views.static_pages.home.slider.hot_chef" %></h3>
-              <%= render partial: "static_pages/thumbnail", locals: {objects: @hot_chefs} %>
-            </div><!-- /Slide3 -->
-          </div>
-
-          <nav>
-            <ul class="control-box pager">
-              <li class="left"><a data-slide="prev" href="#myCarousel" class="arrowStil"><i class="glyphicon glyphicon-chevron-left"></i></a></li>
-              <li class="right"><a data-slide="next" href="#myCarousel" class="arrowStil"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="all-foods">
-    <%= render partial: "static_pages/body_thumbnail", locals: {foods: @all_foods} %>
-  </div>
-
-  <div id="infinite-scrolling">
-    <%= will_paginate @all_foods %>
-  </div>
-</div>

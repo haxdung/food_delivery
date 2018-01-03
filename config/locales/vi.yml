@@ -100,12 +100,6 @@ mật khẩu của bạn sẽ vẫn như nó được."
           new_food: "Món mới"
           hot_food: "Món đặt nhiều"
           hot_chef: "Đầu bếp nổi tiếng"
-<<<<<<< HEAD
-    foods:
-      show:
-          comment: "Bình luận"
-          image: "Hình ảnh"
-=======
         show_orders:
           all: "Tất cả đơn đặt hàng"
           destination: "Nơi Đến:"
@@ -130,4 +124,3 @@ mật khẩu của bạn sẽ vẫn như nó được."
           picture: "Ảnh"
           call: "Gọi"
           share: "Chia sẻ"
->>>>>>> ca7521a2a1d1ced656122f05dd0eb7cd421d9b8e
