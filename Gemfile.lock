@@ -71,6 +71,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    chartkick (2.2.5)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.2.2)
@@ -121,6 +122,8 @@ GEM
       railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    groupdate (3.2.0)
+      activesupport (>= 3)
     hkdf (0.3.0)
     i18n (0.7.0)
     i18n-js (3.0.3)
@@ -256,10 +259,12 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   carrierwave (= 1.1.0)
+  chartkick
   coffee-rails (~> 4.2)
   config
   faker!
   font-awesome-rails
+  groupdate
   i18n (~> 0.7.0)
   i18n-js
   jbuilder (~> 2.5)
@@ -284,4 +289,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

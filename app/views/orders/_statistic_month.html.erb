@@ -25,7 +25,10 @@
 <div class="container">
   <button class="btn btn-default"><%= link_to t("views.orders.index.download"), orders_url(format: "xls") %></button>
 </div>
-
+<div class="container">
+  <h1></h1>
+  <%= pie_chart Order.group_by_day(:created_at).count %>
+</div>
 <script>
     $(document).ready(function() {
         $('#delivery_month').DataTable();
