@@ -27,7 +27,7 @@
 </div>
 <div class="container">
   <h1></h1>
-  <%= pie_chart Order.group_by_day(:created_at).count %>
+  <%= line_chart Order.group("DAY(created_at) =DAY(CURDATE()) AND Month(created_at) =Month(CURDATE()) AND Year(created_at) =Year(CURDATE())").count %>
 </div>
 <script>
     $(document).ready(function() {

@@ -22,6 +22,11 @@ class Order < ApplicationRecord
     where("status = #{Settings.status.done} AND Month(created_at) = Month(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE())")
   }
 
+  scope :deliveried_chart, ->{
+    # group("Month(created_at) =Month(CURDATE()) & Year(created_at) =Year(CURDATE())").count
+    group(:employee_id).count
+  }
+
   def new?
     self.status == Settings.status.new_order
   end

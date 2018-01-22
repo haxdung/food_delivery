@@ -1,3 +1,4 @@
+rand = Random.new
 Food.create name: "Nem",
             img_url: "123124asdasd",
             price: "12",
@@ -117,7 +118,7 @@ end
                      total_money: price)
 end
 
-20.times do |n|
+40.times do |n|
   customer_id = 7
   employee_id = 2
   address = Faker::Address.street_address
