@@ -2,6 +2,7 @@
   <div class="container">
     <div class="col-xs-12">
       <div class="carousel slide vertical" id="myAnnoucements">
+        <% if newest_annoucement.present? %>
         <div class="carousel-inner">
           <% newest_annoucement[0].pictures.each do |pic| %>
             <div class="item active">
@@ -9,7 +10,7 @@
             </div>
           <% end %>
         </div>
-          <!-- /.control-box -->
+        <% end %><!-- /.control-box -->
       </div><!-- /#myCarousel -->
     </div><!-- /.col-xs-12 -->
   </div><!-- /.container -->

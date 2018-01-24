@@ -3,7 +3,6 @@ class AnnoucementsController < ApplicationController
     if params[:picture].nil?
       redirect_to(request.referrer)
     end
-
     @annoucement = Annoucement.new annoucement_params
     if @annoucement.save
       if params[:pictures]

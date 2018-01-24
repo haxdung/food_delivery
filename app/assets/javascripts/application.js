@@ -18,5 +18,4 @@
 //= require i18n/translations
 //= require jquery-ui
 //= require bootstrap
-//= require turbolinks
 //= require_tree .

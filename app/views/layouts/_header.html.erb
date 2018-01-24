@@ -24,13 +24,7 @@
         <li><a href="#newFood" data-toggle="modal"><%= t "views.foods.new.new_food" %></a></li>
         <li><a href="#addAnnoucement" data-toggle="modal"><%= t "views.annoucements.add_annoucement" %></a></li>
       <% else %>
-        <li><a href="#"><%= t "views.layouts.header.all" %></a></li>
-        <li><a href="#"><%= t "views.layouts.header.lunch" %></a></li>
-        <li><a href="#"><%= t "views.layouts.header.drink" %></a></li>
-        <li><a href="#"><%= t "views.layouts.header.dessert" %></a></li>
-        <li>
-          <a href= <%=carts_url %>><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i><span class="badge"><%= cart_amount %></span></a>
-        </li>
+        <li><a href= <%=carts_url %>><i class="fa fa-shopping-cart fa-2x" aria-hidden="true" id="cart-icon"></i><span id="badge" class="badge"> <%= cart_amount %></span></a></li>
       <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -45,6 +39,9 @@
             <% end %>
           </li>
         <% else %>
+          <li>
+              <a href="<%= orders_url %>"><i class="fa fa-list fa-2x" aria-hidden="true"></i> <%= t "views.orders.index.order_month" %></a>
+          </li>
           <li>
             <%= link_to foods_path do %>
               <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i> <%= t "views.layouts.header.list_food" %>
@@ -78,7 +75,7 @@
     </div>
   </div>
 </nav>
-<%= render "layouts/form_login" %>
-<%= render "foods/new" %>
+<%= render "layouts/form_login" if !logged_in?%>
+<%= render "foods/new" if logged_in? && current_user.admin?%>
 <%= javascript_include_tag "login_modal", "data-turbolinks-track": "reload" %>
-<%= render "layouts/add_annoucements" %>
+<%= render "layouts/add_annoucements"  if logged_in? && current_user.admin?%>
