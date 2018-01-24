@@ -21,7 +21,7 @@
 /yarn-error.log
 
 .byebug_history
-/config/secrets.yml
+#/config/secrets.yml
 /test/*
 .idea/*
 /config/environments/development.rb
