@@ -34,7 +34,7 @@
                 <ul>
                   <% order.order_details.each do |detail|%>
                     <li><span><%= t "views.static_pages.show_orders.quantity" %></span>: <%= detail.quantity%> <%= Food.find(detail.food_id).name %></li>
-                    <li><span><%= t "views.static_pages.show_orders.price_each" %></span>: $<%= detail.price %></li>
+                    <li><span><%= t "views.static_pages.show_orders.price_each" %></span>: $<%= detail.total_money %></li>
                     <li>
                       <%= link_to detail.food do %>
                         <%= image_tag Food.find(detail.food_id).img_url, alt: detail.food.name %>
