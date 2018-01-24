@@ -1,5 +1,5 @@
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/assets/serviceworker.js')
+  navigator.serviceWorker.register('<%= asset_path 'serviceworker.js' %>')
     .then(function (registration) {
       registration.pushManager.subscribe({ userVisibleOnly: true })
         .then(function (subscription) {
